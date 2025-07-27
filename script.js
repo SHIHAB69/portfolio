@@ -184,4 +184,41 @@ document.addEventListener('keydown', function(event) {
 // Toast close button event listener
 toastClose.addEventListener('click', hideToast);
 
+// === Modern Scroll-triggered Animations ===
+function animateOnScroll() {
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const staggerEls = document.querySelectorAll('.stagger-item');
+
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeEls.forEach(el => fadeObserver.observe(el));
+
+  // Staggered animation for grid/list items
+  const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const items = Array.from(entry.target.querySelectorAll('.stagger-item'));
+        items.forEach((item, i) => {
+          setTimeout(() => item.classList.add('visible'), i * 120);
+        });
+        staggerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  // Observe parent grids for staggered effect
+  document.querySelectorAll('.portfolio-grid, .services-grid').forEach(grid => {
+    staggerObserver.observe(grid);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', animateOnScroll);
+
 
