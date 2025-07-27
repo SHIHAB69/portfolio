@@ -36,7 +36,8 @@
               </p>
             </div>
             <div class="hero-buttons">
-              <button class="btn primary">Download CV</button>
+              <button class="btn primary" id="downloadCV">Download CV</button>
+              <button class="btn secondary" id="previewCV">Preview CV</button>
               <button class="btn secondary">Hire Me</button>
             </div>
             <div class="social-icons">
@@ -53,34 +54,87 @@
         <h2>Services</h2>
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Modern and user-friendly interfaces for web and mobile.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Backend Development</h3>
+            <p>Scalable, secure server-side systems using Django and Flask with RESTful APIs and database integration.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Web Development</h3>
-            <p>Responsive and performant websites and web apps.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 8L3 12L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 8L21 12L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 4L10 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Modern and responsive UI development using HTML, CSS, JavaScript, and frontend frameworks like React and Tailwind CSS.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>App Design</h3>
-            <p>Beautiful and functional mobile app designs.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Web Applications</h3>
+            <p>End-to-end web app development including design, functionality, and deployment tailored to business needs.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">🖌️</div>
-            <h3>Branding</h3>
-            <p>Unique brand identities and logo design.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Android Application</h3>
+            <p>Native and cross-platform mobile apps for Android using Flutter, optimized for performance and usability.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">📝</div>
-            <h3>Content Writing</h3>
-            <p>Engaging and effective content for your audience.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM18 20H6V4H18V20Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 18C13.1 18 14 17.1 14 16C14 14.9 13.1 14 12 14C10.9 14 10 14.9 10 16C10 17.1 10.9 18 12 18Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>iOS Application</h3>
+            <p>High-quality iOS app development using Flutter, ensuring smooth performance on all Apple devices.</p>
           </div>
           <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h3>SEO Optimization</h3>
-            <p>Improve your website's visibility and ranking.</p>
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Flutter Application</h3>
+            <p>Beautiful, fast, and responsive cross-platform apps with a single codebase for Android, iOS, Web, and Desktop.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="currentColor">DJ</text>
+              </svg>
+            </div>
+            <h3>Django Web Application</h3>
+            <p>Full-stack web applications using the Django framework with clean architecture, admin panels, and API integration.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>AI Applications</h3>
+            <p>Intelligent applications powered by AI/ML models, including chatbots, OCR, recommendation systems, and more using OpenAI, ML Kit, or custom-trained models.</p>
           </div>
         </div>
       </section>
@@ -109,16 +163,12 @@
       </section>
       <section class="stats-row">
         <div class="stat">
-          <div class="stat-value">3rd</div>
-          <div class="stat-label">Year Student</div>
+          <div class="stat-value">Software</div>
+          <div class="stat-label"><a href="https://www.techjays.com/" target="_blank">Engineer, Techjays</a></div>
         </div>
         <div class="stat">
           <div class="stat-value">Acting</div>
-          <div class="stat-label">President, Data Science Club</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">Student</div>
-          <div class="stat-label">Associate, Data Science Lab</div>
+          <div class="stat-label"><a href="https://dslab.daffodilvarsity.edu.bd/club" target="_blank">President, Data Science Club</a></div>
         </div>
         <div class="stat">
           <div class="stat-value">Bangladesh</div>
@@ -138,15 +188,18 @@
       <section id="experience" class="experience">
         <h2>Work Experience</h2>
         <div class="card">
-          <h3>Software Engineer — Techjays</h3>
+          <h3>Software Engineer — <a href="https://www.techjays.com/" target="_blank">Techjays</a></h3>
           <p><strong>Duration:</strong> Jul 2025 - Present</p>
           <ul>
-            <li>Developed and deployed an in-house AI application, ensuring production readiness by integrating APIs and performing comprehensive code reviews.</li>
-            <li>Collaborated with cross-functional teams to implement AI-powered features and ensure smooth deployment, system performance, and adherence to quality standards.</li>
+            <li>Working on <a href="https://hirefinch.ai/" target="_blank">HireFinch</a> - an AI-powered interview platform, developing backend systems using Django and Python.</li>
+            <li>Implementing AI integration features including OpenAI and Gemini APIs for dynamic interview plan generation and coding question creation.</li>
+            <li>Building scalable backend architecture with REST APIs, webhook systems, and real-time question shuffling for fair interview processes.</li>
+            <li>Integrating 1:1 voice interview capabilities with AI scoring and contributing to security features and performance optimizations.</li>
+            <li>Collaborating with cross-functional teams to ensure smooth deployment, system performance, and adherence to quality standards.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Course Coordinator — Q-Bit Learning</h3>
+          <h3>Course Coordinator — <a href="https://q-bitlearning.com/" target="_blank">Q-Bit Learning</a></h3>
           <p><strong>Duration:</strong> Jan 2025 – Mar 2025</p>
           <ul>
             <li>Coordinated course planning, module structure, and delivery schedules across multiple subjects including Data Structures, Algorithms, and Machine Learning.</li>
@@ -159,21 +212,21 @@
       <section id="leadership" class="leadership">
         <h2>Leadership & Volunteering</h2>
         <div class="card">
-          <h3>Executive Member — BASIS Students Forum, DIU Chapter</h3>
+          <h3>Executive Member — <a href="https://www.linkedin.com/posts/basis-student-s-forum-daffodil-international-university-chapter_executiveteam-basisstudentsforum-innovationstartshere-activity-7266019147023548416-BnG0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEr3nsgBxLYjWS1LVF7MFQwP-JxpY5jSdg0" target="_blank">BASIS Students Forum, DIU Chapter</a></h3>
           <ul>
             <li>Actively involved in planning and executing tech-focused events, seminars, and workshops.</li>
             <li>Supported industry collaborations and facilitated student engagement in tech entrepreneurship and skill development initiatives.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Research & Event Organizing Executive — Data Science Club, DIU</h3>
+          <h3>Research & Event Organizing Executive — <a href="https://www.linkedin.com/company/diu-data-science-club/" target="_blank">Data Science Club, DIU</a></h3>
           <ul>
             <li>Conducted internal research and technical documentation for club-driven AI and data science initiatives.</li>
             <li>Assisted in organizing educational outreach programs and contributed to curriculum design for AI/ML workshops.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Lead Volunteer — 4th National Data Science Summit 2024</h3>
+          <h3>Lead Volunteer — <a href="https://datascience-summit-24.vercel.app/" target="_blank">4th National Data Science Summit 2024</a></h3>
           <ul>
             <li>Managed end-to-end logistics for the summit, including guest coordination, sponsor handling, food management, and venue preparation.</li>
             <li>Successfully executed four parallel tech events: Promptcraft Challenge, Project Showcasing, Data Hackathon, and Poster Presentation.</li>
@@ -196,14 +249,45 @@
         <h2>Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <h3>Police Forensic App InsightPOL</h3>
+            <h3><a href="https://hirefinch.ai/" target="_blank">HireFinch – AI-Powered Interview Platform</a></h3>
+            <p><strong>Role:</strong> Backend Developer (Django)</p>
+            <p><strong>Tech Stack:</strong> Django, Python, REST API, OpenAI API, Gemini API, reCaptcha</p>
+            <p><strong>Description:</strong></p>
+            <p>Working on backend development and AI integration for an AI-powered structured interview platform. Key contributions include:</p>
             <ul>
-              <li>Developed a robust Flutter application for secure media submission and real-time messaging between police and forensic teams.</li>
-              <li>Implemented real-time chat using webhooks, optimized backend logic, and refined socket event handling for message synchronization.</li>
+              <li>AI-generated coding questions based on job roles</li>
+              <li>Dynamic interview plan generation using LLMs</li>
+              <li>Real-time question shuffling for fairness</li>
+              <li>1:1 voice interview integration with AI scoring</li>
+              <li>Webhook-based updates and scoring pipeline</li>
+              <li>Contributed to scalable backend design and AI-driven automation to reduce recruiter workload by up to 80%</li>
+              <li>Integrated security features and improvements</li>
             </ul>
           </div>
           <div class="project-card">
-            <h3>Meta Business Agent (Message Automation Tool)</h3>
+            <h3><a href="https://play.google.com/store/apps/details?id=com.diucybersecuritycenter.insightpol" target="_blank">Bangladesh Police Forensic App – InsightPOL</a></h3>
+            <div class="project-images">
+              <img src="assets/images/insightpol1.png" alt="InsightPOL App Screenshot 1" class="project-image">
+              <img src="assets/images/insightpol2.png" alt="InsightPOL App Screenshot 2" class="project-image">
+              <img src="assets/images/insightpol3.png" alt="InsightPOL App Screenshot 3" class="project-image">
+            </div>
+            <p><strong>Role:</strong> Full-Stack Flutter Developer</p>
+            <p><strong>Tech Stack:</strong> Flutter, REST API, Hive, Webhooks, SharedPreferences</p>
+            <p><strong>Description:</strong></p>
+            <p>Developed a full-featured mobile application for the Bangladesh Police to streamline forensic request handling and communication between officers and forensic teams. The app was officially used in a training program by the Bangladesh Police and is actively used by police and forensic teams of Bangladesh Police for daily operations.</p>
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+              <li>Built secure media submission and forensic request features</li>
+              <li>Integrated real-time messaging using webhooks and optimized socket events</li>
+              <li>Managed authentication and user sessions using Hive and SharedPreferences</li>
+              <li>Designed clean, responsive UI with dashboard, chat, and analytics modules</li>
+              <li>Collaborated with backend team for API integration and deployment readiness</li>
+            </ul>
+            <p><strong>Impact:</strong></p>
+            <p>Improved communication efficiency and digital workflow adoption for forensic operations in law enforcement. The app was successfully used in an official training session for officers and continues to be actively deployed for daily forensic operations by Bangladesh Police teams.</p>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/SHIHAB69/facebook_page_agent" target="_blank">Meta Business Agent (Message Automation Tool)</a></h3>
             <ul>
               <li>Developed a scalable, agentic AI system for academic support, admission help, OCR-based form handling, and routine automation.</li>
               <li>Designed a no-human-touch pipeline for customer engagement across Facebook, Instagram, and WhatsApp APIs.</li>
@@ -217,21 +301,21 @@
             </ul>
           </div>
           <div class="project-card">
-            <h3>Murphys_AI</h3>
+            <h3><a href="https://github.com/SHIHAB69/murphys_AI" target="_blank">Murphys_AI</a></h3>
             <ul>
               <li>Built a free-to-use AI chatbot using GROQ's open LLMs, maintaining a ChatGPT-like experience in Flutter.</li>
               <li>Integrated alternative LLMs while preserving response quality and app responsiveness.</li>
             </ul>
           </div>
           <div class="project-card">
-            <h3>Mart VPN</h3>
+            <h3><a href="https://github.com/SHIHAB69/Vpn_flutter_project" target="_blank">Mart VPN</a></h3>
             <ul>
               <li>Developed a simple, effective VPN app in Flutter for fast and secure internet access.</li>
               <li>Managed network configurations and performance optimization for cross-platform deployment.</li>
             </ul>
           </div>
           <div class="project-card">
-            <h3>Text Recognition App</h3>
+            <h3><a href="https://github.com/SHIHAB69/text_recognition_app-main" target="_blank">Text Recognition App</a></h3>
             <ul>
               <li>Built using Flutter and Google ML Kit to extract and process text from images.</li>
             </ul>
@@ -251,13 +335,13 @@
           <div class="skill-card">
             <h3>Frameworks & Libraries</h3>
             <ul>
-              <li>Flutter, Django, Flask, Bloc, MVVM</li>
+              <li>Flutter, Django, Flask, Bloc, MVVM, MVT</li>
             </ul>
           </div>
           <div class="skill-card">
             <h3>Cloud & Databases</h3>
             <ul>
-              <li>Firebase, MongoDB</li>
+              <li>Firebase, MongoDB, SQL</li>
             </ul>
           </div>
           <div class="skill-card">
@@ -279,8 +363,8 @@
         <h2>Certifications & Achievements</h2>
         <div class="card">
           <ul>
-            <li>Generative AI Engineer Path | Scrimba: Completed a structured learning path covering prompt engineering, LLM integration, and generative workflows using Python and modern AI tools.</li>
-            <li>Participant — NASA International Space Apps Challenge</li>
+            <li><a href="https://scrimba.com/@SHIHAB69:certs" target="_blank">Generative AI Engineer Path | Scrimba</a>: Completed a structured learning path covering prompt engineering, LLM integration, and generative workflows using Python and modern AI tools.</li>
+            <li>Participant — <a href="https://nsac.basis.org.bd/" target="_blank">NASA International Space Apps Challenge</a></li>
           </ul>
         </div>
       </section>
@@ -297,45 +381,49 @@
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Project 1" />
+            <img src="assets/images/hirefinch1.png" alt="HireFinch AI Interview Platform" />
             <div class="portfolio-info">
-              <h3>Project One</h3>
-              <p>UI/UX Design</p>
+              <h3>HireFinch</h3>
+              <p>AI-Powered Interview Platform</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Project 2" />
+            <div class="image-scroll-container">
+              <img src="assets/images/insightpol1.png" alt="InsightPOL Police App" />
+              <img src="assets/images/insightpol2.png" alt="InsightPOL Police App" />
+              <img src="assets/images/insightpol3.png" alt="InsightPOL Police App" />
+            </div>
             <div class="portfolio-info">
-              <h3>Project Two</h3>
-              <p>Web Development</p>
+              <h3>InsightPOL</h3>
+              <p>Police Forensic App</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 3" />
+            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=400&q=80" alt="Meta Business Agent" />
             <div class="portfolio-info">
-              <h3>Project Three</h3>
-              <p>App Design</p>
+              <h3>Meta Business Agent</h3>
+              <p>Message Automation Tool</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=400&q=80" alt="Project 4" />
+            <img src="https://images.unsplash.com/photo-1676299251950-0d9c4b5e5c5c?auto=format&fit=crop&w=400&q=80" alt="Murphys AI Chatbot" />
             <div class="portfolio-info">
-              <h3>Project Four</h3>
-              <p>Branding</p>
+              <h3>Murphys_AI</h3>
+              <p>AI Chatbot with GROQ</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80" alt="Project 5" />
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=400&q=80" alt="Mart VPN App" />
             <div class="portfolio-info">
-              <h3>Project Five</h3>
-              <p>Content Writing</p>
+              <h3>Mart VPN</h3>
+              <p>Secure VPN Application</p>
             </div>
           </div>
           <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Project 6" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Text Recognition App" />
             <div class="portfolio-info">
-              <h3>Project Six</h3>
-              <p>SEO Optimization</p>
+              <h3>Text Recognition</h3>
+              <p>OCR with ML Kit</p>
             </div>
           </div>
         </div>
@@ -366,6 +454,24 @@
       </footer>
     </div>
   </div>
+  
+  <!-- CV Preview Modal -->
+  <div id="cvModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Sihab Howladar - CV</h2>
+        <span class="close" id="closeModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <iframe id="cvIframe" src="Sihab_CV_2025 v2.pdf" width="100%" height="600px"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button class="btn primary" id="downloadFromModal">Download CV</button>
+        <button class="btn secondary" id="closeModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

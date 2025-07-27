@@ -220,7 +220,7 @@ nav a:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
@@ -240,9 +240,21 @@ nav a:hover {
 }
 
 .service-icon {
-  font-size: 2.2rem;
   margin-bottom: 0.7rem;
   color: #ff6a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-icon svg {
+  transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -338,6 +350,34 @@ nav a:hover {
   font-size: 1rem;
 }
 
+.stat-label a {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-right: 18px;
+}
+
+.stat-label a::after {
+  content: "🔗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7em;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.stat-label a:hover {
+  color: #ff6a00;
+  text-decoration: underline;
+}
+
+.stat-label a:hover::after {
+  opacity: 1;
+}
+
 /* === Portfolio Section === */
 .portfolio {
   padding: 2rem;
@@ -369,11 +409,40 @@ nav a:hover {
   box-shadow: 0 4px 16px rgba(255,106,0,0.08);
 }
 
+.image-scroll-container {
+  display: flex;
+  gap: 0.5rem;
+  height: 140px;
+}
+
+.image-scroll-container img {
+  flex: 1;
+  width: calc(33.333% - 0.33rem);
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  border-radius: 4px;
+}
+
+.image-scroll-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Standard portfolio card image styling */
 .portfolio-card img {
   width: 100%;
   height: 140px;
   object-fit: cover;
-  display: block;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-card img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-card {
+  overflow: hidden;
+  position: relative;
 }
 
 .portfolio-info {
@@ -407,10 +476,66 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
+.card h3 a {
+  color: #ff6a00;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-right: 20px;
+}
+
+.card h3 a::after {
+  content: "🔗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.card h3 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.card h3 a:hover::after {
+  opacity: 1;
+}
+
 .card ul {
   margin-left: 1.2rem;
   color: #bbb;
   font-size: 1rem;
+}
+
+.card ul a {
+  color: #ff6a00;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-right: 16px;
+}
+
+.card ul a::after {
+  content: "🔗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7em;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.card ul a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.card ul a:hover::after {
+  opacity: 1;
 }
 
 .projects-grid {
@@ -433,10 +558,67 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
+.project-card h3 a {
+  color: #ff6a00;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-right: 20px;
+}
+
+.project-card h3 a::after {
+  content: "🔗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.project-card h3 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.project-card h3 a:hover::after {
+  opacity: 1;
+}
+
 .project-card ul {
   margin-left: 1.2rem;
   color: #bbb;
   font-size: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid #333;
+  transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+}
+
+.project-images {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.project-images .project-image {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  height: 150px;
+  margin: 0;
 }
 
 .skills-grid {
@@ -653,4 +835,134 @@ body.dark textarea {
   background: #181818;
   color: #fff;
   border: 1.5px solid #444;
+}
+
+/* === CV Modal Styles === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close:hover {
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: 0;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.modal-body iframe {
+  border: none;
+  border-radius: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Dark theme modal styles */
+body.dark .modal-content {
+  background-color: #232323;
+  color: #fff;
+}
+
+body.dark .modal-header {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+body.dark .modal-footer {
+  background: #181818;
+  border-top: 1px solid #444;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    max-height: 85vh;
+  }
+  
+  .modal-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .modal-body iframe {
+    height: 400px;
+  }
+  
+  .modal-footer {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
 }
