@@ -83,4 +83,105 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+// Contact Form Modal Functionality
+const hireMeBtn = document.getElementById('hireMe');
+const contactModal = document.getElementById('contactModal');
+const closeContactModal = document.getElementById('closeContactModal');
+const closeContactModalBtn = document.getElementById('closeContactModalBtn');
+const submitHireMe = document.getElementById('submitHireMe');
+const hireMeForm = document.getElementById('hireMeForm');
+
+// Toast Notification Functionality
+const toast = document.getElementById('toast');
+const toastClose = document.getElementById('toastClose');
+
+// Function to show toast notification
+function showToast() {
+  toast.classList.add('show');
+  
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    hideToast();
+  }, 5000);
+}
+
+// Function to hide toast notification
+function hideToast() {
+  toast.classList.remove('show');
+}
+
+// Function to open contact form modal
+function openContactModal() {
+  contactModal.style.display = 'block';
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Function to close contact form modal
+function closeContactModalFunc() {
+  contactModal.style.display = 'none';
+  document.body.style.overflow = 'auto'; // Restore background scrolling
+  hireMeForm.reset(); // Reset form when closing
+}
+
+// Function to handle form submission
+function submitHireMeForm() {
+  const formData = new FormData(hireMeForm);
+  const data = Object.fromEntries(formData);
+  
+  // Create email body
+  const emailBody = `
+New Project Inquiry from Portfolio Website
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company || 'Not specified'}
+Phone: ${data.phone || 'Not specified'}
+
+Project Type: ${data.subject}
+Budget Range: ${data.budget}
+Timeline: ${data.timeline}
+
+Project Details:
+${data.message}
+
+---
+This inquiry was submitted from your portfolio website.
+  `.trim();
+
+  // Create mailto link
+  const mailtoLink = `mailto:sihab2305341203@diu.edu.bd?subject=Project Inquiry - ${encodeURIComponent(data.subject)}&body=${encodeURIComponent(emailBody)}`;
+  
+  // Open email client
+  window.open(mailtoLink);
+  
+  // Close modal
+  closeContactModalFunc();
+  
+  // Show toast notification
+  showToast();
+}
+
+// Event listeners for contact modal
+hireMeBtn.addEventListener('click', openContactModal);
+closeContactModal.addEventListener('click', closeContactModalFunc);
+closeContactModalBtn.addEventListener('click', closeContactModalFunc);
+submitHireMe.addEventListener('click', submitHireMeForm);
+
+// Close contact modal when clicking outside of it
+window.addEventListener('click', function(event) {
+  if (event.target === contactModal) {
+    closeContactModalFunc();
+  }
+});
+
+// Close contact modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && contactModal.style.display === 'block') {
+    closeContactModalFunc();
+  }
+});
+
+// Toast close button event listener
+toastClose.addEventListener('click', hideToast);
+
 

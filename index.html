@@ -38,7 +38,7 @@
             <div class="hero-buttons">
               <button class="btn primary" id="downloadCV">Download CV</button>
               <button class="btn secondary" id="previewCV">Preview CV</button>
-              <button class="btn secondary">Hire Me</button>
+              <button class="btn secondary" id="hireMe">Hire Me</button>
             </div>
             <div class="social-icons">
               <a href="https://github.com/SHIHAB69" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></a>
@@ -47,6 +47,42 @@
           </div>
           <div class="hero-img">
             <img src="profile.jpg" alt="Profile" />
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio">
+        <h2>Featured Projects</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <a href="https://hirefinch.ai/" target="_blank">
+              <img src="assets/images/hirefinch1.png" alt="HireFinch AI Interview Platform" />
+              <div class="portfolio-info">
+                <h3>HireFinch</h3>
+                <p>AI-Powered Interview Platform</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card">
+            <a href="https://play.google.com/store/apps/details?id=com.diucybersecuritycenter.insightpol" target="_blank">
+              <div class="image-scroll-container">
+                <img src="assets/images/insightpol1.png" alt="InsightPOL Police App" />
+                <img src="assets/images/insightpol2.png" alt="InsightPOL Police App" />
+                <img src="assets/images/insightpol3.png" alt="InsightPOL Police App" />
+              </div>
+              <div class="portfolio-info">
+                <h3>InsightPOL</h3>
+                <p>Police Forensic App</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card">
+            <a href="https://github.com/SHIHAB69/facebook_page_agent" target="_blank">
+              <img src="assets/images/MetaB.png" alt="Meta Business Agent" />
+              <div class="portfolio-info">
+                <h3>Meta Business Agent</h3>
+                <p>Message Automation Tool</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -266,11 +302,7 @@
           </div>
           <div class="project-card">
             <h3><a href="https://play.google.com/store/apps/details?id=com.diucybersecuritycenter.insightpol" target="_blank">Bangladesh Police Forensic App – InsightPOL</a></h3>
-            <div class="project-images">
-              <img src="assets/images/insightpol1.png" alt="InsightPOL App Screenshot 1" class="project-image">
-              <img src="assets/images/insightpol2.png" alt="InsightPOL App Screenshot 2" class="project-image">
-              <img src="assets/images/insightpol3.png" alt="InsightPOL App Screenshot 3" class="project-image">
-            </div>
+            
             <p><strong>Role:</strong> Full-Stack Flutter Developer</p>
             <p><strong>Tech Stack:</strong> Flutter, REST API, Hive, Webhooks, SharedPreferences</p>
             <p><strong>Description:</strong></p>
@@ -376,58 +408,7 @@
             In the next 2–5 years, I aim to become a well-rounded problem solver capable of designing intelligent, scalable systems. I’m passionate about building real-world AI-powered applications, continuing my journey in mobile development, and contributing to agent-based software systems. I also plan to publish research and contribute to open-source AI tools that benefit the broader tech community.
           </p>
         </div>
-      </section>
-      <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <img src="assets/images/hirefinch1.png" alt="HireFinch AI Interview Platform" />
-            <div class="portfolio-info">
-              <h3>HireFinch</h3>
-              <p>AI-Powered Interview Platform</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <div class="image-scroll-container">
-              <img src="assets/images/insightpol1.png" alt="InsightPOL Police App" />
-              <img src="assets/images/insightpol2.png" alt="InsightPOL Police App" />
-              <img src="assets/images/insightpol3.png" alt="InsightPOL Police App" />
-            </div>
-            <div class="portfolio-info">
-              <h3>InsightPOL</h3>
-              <p>Police Forensic App</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=400&q=80" alt="Meta Business Agent" />
-            <div class="portfolio-info">
-              <h3>Meta Business Agent</h3>
-              <p>Message Automation Tool</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1676299251950-0d9c4b5e5c5c?auto=format&fit=crop&w=400&q=80" alt="Murphys AI Chatbot" />
-            <div class="portfolio-info">
-              <h3>Murphys_AI</h3>
-              <p>AI Chatbot with GROQ</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=400&q=80" alt="Mart VPN App" />
-            <div class="portfolio-info">
-              <h3>Mart VPN</h3>
-              <p>Secure VPN Application</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Text Recognition App" />
-            <div class="portfolio-info">
-              <h3>Text Recognition</h3>
-              <p>OCR with ML Kit</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section id="contact" class="contact">
         <h2>Contact me</h2>
         <form id="contactForm">
@@ -469,6 +450,66 @@
         <button class="btn primary" id="downloadFromModal">Download CV</button>
         <button class="btn secondary" id="closeModalBtn">Close</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Hire Me - Project Inquiry</h2>
+        <span class="close" id="closeContactModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="hireMeForm">
+          <div class="form-row">
+            <input type="text" id="hireName" name="name" placeholder="Your Name *" required />
+            <input type="email" id="hireEmail" name="email" placeholder="Your Email *" required />
+          </div>
+          <div class="form-row">
+            <input type="text" id="hireCompany" name="company" placeholder="Company/Organization" />
+            <input type="tel" id="hirePhone" name="phone" placeholder="Phone Number" />
+          </div>
+          <input type="text" id="hireSubject" name="subject" placeholder="Project Type (e.g., Web App, Mobile App, AI Integration) *" required />
+          <textarea id="hireMessage" name="message" placeholder="Project Details & Requirements *" required></textarea>
+          <div class="form-row">
+            <select id="hireBudget" name="budget" required>
+              <option value="">Select Budget Range *</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+              <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+              <option value="$25,000+">$25,000+</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+            <select id="hireTimeline" name="timeline" required>
+              <option value="">Select Timeline *</option>
+              <option value="1-2 weeks">1-2 weeks</option>
+              <option value="1 month">1 month</option>
+              <option value="2-3 months">2-3 months</option>
+              <option value="3-6 months">3-6 months</option>
+              <option value="6+ months">6+ months</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn primary" id="submitHireMe">Send Inquiry</button>
+        <button class="btn secondary" id="closeContactModalBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <div class="toast-icon">✅</div>
+      <div class="toast-message">
+        <h4>Inquiry Sent!</h4>
+        <p>Your email client should open with a pre-filled message. If it doesn't, please email me directly at sihab2305341203@diu.edu.bd</p>
+      </div>
+      <button class="toast-close" id="toastClose">&times;</button>
     </div>
   </div>
   

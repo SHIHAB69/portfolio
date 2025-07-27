@@ -445,6 +445,17 @@ nav a:hover {
   position: relative;
 }
 
+.portfolio-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-card a:hover {
+  transform: translateY(-2px);
+}
+
 .portfolio-info {
   padding: 1rem;
   text-align: center;
@@ -964,5 +975,155 @@ body.dark .modal-footer {
   
   .modal-footer .btn {
     width: 100%;
+  }
+}
+
+/* Contact Form Modal Specific Styles */
+#hireMeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#hireMeForm .form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+#hireMeForm .form-row input,
+#hireMeForm .form-row select {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#hireMeForm .form-row select {
+  cursor: pointer;
+}
+
+#hireMeForm .form-row select option {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+#hireMeForm input:focus,
+#hireMeForm textarea:focus,
+#hireMeForm select:focus {
+  outline: none;
+  border-color: #ff6a00;
+  box-shadow: 0 0 0 2px rgba(255, 106, 0, 0.2);
+}
+
+#hireMeForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Dark theme adjustments for contact form */
+body.dark #hireMeForm input,
+body.dark #hireMeForm textarea,
+body.dark #hireMeForm select {
+  background: #1a1a1a;
+  border-color: #333;
+}
+
+body.dark #hireMeForm .form-row select option {
+  background: #1a1a1a;
+}
+
+/* Toast Notification Styles */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.toast-content {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(255, 152, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 320px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.toast-message h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.toast-message p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.toast-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark theme toast */
+body.dark .toast-content {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  box-shadow: 0 8px 32px rgba(255, 152, 0, 0.4);
+}
+
+/* Responsive toast */
+@media (max-width: 768px) {
+  .toast {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .toast-content {
+    min-width: auto;
+    max-width: none;
   }
 }
