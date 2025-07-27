@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
   <body>
+  <!-- 3D Background Canvas -->
+  <canvas id="bgCanvas" class="bg-canvas"></canvas>
+  
   <div class="main-bg">
     <div class="container">
       <header>
@@ -245,42 +248,6 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
           </ul>
         </div>
       </section>
-      <!-- Leadership & Volunteering Section -->
-      <section id="leadership" class="leadership fade-in">
-        <h2>Leadership & Volunteering</h2>
-        <div class="card">
-          <h3>Executive Member — <a href="https://www.linkedin.com/posts/basis-student-s-forum-daffodil-international-university-chapter_executiveteam-basisstudentsforum-innovationstartshere-activity-7266019147023548416-BnG0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEr3nsgBxLYjWS1LVF7MFQwP-JxpY5jSdg0" target="_blank">BASIS Students Forum, DIU Chapter</a></h3>
-          <ul>
-            <li>Actively involved in planning and executing tech-focused events, seminars, and workshops.</li>
-            <li>Supported industry collaborations and facilitated student engagement in tech entrepreneurship and skill development initiatives.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Research & Event Organizing Executive — <a href="https://www.linkedin.com/company/diu-data-science-club/" target="_blank">Data Science Club, DIU</a></h3>
-          <ul>
-            <li>Conducted internal research and technical documentation for club-driven AI and data science initiatives.</li>
-            <li>Assisted in organizing educational outreach programs and contributed to curriculum design for AI/ML workshops.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Lead Volunteer — <a href="https://datascience-summit-24.vercel.app/" target="_blank">4th National Data Science Summit 2024</a></h3>
-          <ul>
-            <li>Managed end-to-end logistics for the summit, including guest coordination, sponsor handling, food management, and venue preparation.</li>
-            <li>Successfully executed four parallel tech events: Promptcraft Challenge, Project Showcasing, Data Hackathon, and Poster Presentation.</li>
-            <li>Oversaw a large volunteer team and ensured smooth operations under the supervision of the Data Science Lab and Department of Software Engineering.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Organizer — Workshops and Competitions</h3>
-          <ul>
-            <li>Organized the Python Workshop under the Data Science Lab and Club.</li>
-            <li>Hosted the MLOps in Action Workshop, introducing tools like Docker and GitHub Actions.</li>
-            <li>Conducted Intro to Git and GitHub sessions twice (in 2024 and 2025).</li>
-            <li>Organized the Agentic AI Project Showcase under the Department of Software Engineering.</li>
-            <li>Coordinated the Agentic AI Competition for Web Development and E-commerce Solutions.</li>
-          </ul>
-        </div>
-      </section>
       <!-- Projects Section -->
       <section id="projects" class="projects fade-in">
         <h2>Projects</h2>
@@ -353,6 +320,43 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
               <li>Built using Flutter and Google ML Kit to extract and process text from images.</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <!-- Leadership & Volunteering Section -->
+      <section id="leadership" class="leadership fade-in">
+        <h2>Leadership & Volunteering</h2>
+        <div class="card">
+          <h3>Executive Member — <a href="https://www.linkedin.com/posts/basis-student-s-forum-daffodil-international-university-chapter_executiveteam-basisstudentsforum-innovationstartshere-activity-7266019147023548416-BnG0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEr3nsgBxLYjWS1LVF7MFQwP-JxpY5jSdg0" target="_blank">BASIS Students Forum, DIU Chapter</a></h3>
+          <ul>
+            <li>Actively involved in planning and executing tech-focused events, seminars, and workshops.</li>
+            <li>Supported industry collaborations and facilitated student engagement in tech entrepreneurship and skill development initiatives.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Research & Event Organizing Executive — <a href="https://www.linkedin.com/company/diu-data-science-club/" target="_blank">Data Science Club, DIU</a></h3>
+          <ul>
+            <li>Conducted internal research and technical documentation for club-driven AI and data science initiatives.</li>
+            <li>Assisted in organizing educational outreach programs and contributed to curriculum design for AI/ML workshops.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Lead Volunteer — <a href="https://datascience-summit-24.vercel.app/" target="_blank">4th National Data Science Summit 2024</a></h3>
+          <ul>
+            <li>Managed end-to-end logistics for the summit, including guest coordination, sponsor handling, food management, and venue preparation.</li>
+            <li>Successfully executed four parallel tech events: Promptcraft Challenge, Project Showcasing, Data Hackathon, and Poster Presentation.</li>
+            <li>Oversaw a large volunteer team and ensured smooth operations under the supervision of the Data Science Lab and Department of Software Engineering.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Organizer — Workshops and Competitions</h3>
+          <ul>
+            <li>Organized the Python Workshop under the Data Science Lab and Club.</li>
+            <li>Hosted the MLOps in Action Workshop, introducing tools like Docker and GitHub Actions.</li>
+            <li>Conducted Intro to Git and GitHub sessions twice (in 2024 and 2025).</li>
+            <li>Organized the Agentic AI Project Showcase under the Department of Software Engineering.</li>
+            <li>Coordinated the Agentic AI Competition for Web Development and E-commerce Solutions.</li>
+          </ul>
         </div>
       </section>
       <!-- Technical Skills Section -->
@@ -435,8 +439,20 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
         <p>&copy; 2025 Sihab Howladar. All rights reserved.</p>
       </footer>
     </div>
+    </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress">
+    <div class="progress-dot" data-section="home"></div>
+    <div class="progress-dot" data-section="portfolio"></div>
+    <div class="progress-dot" data-section="services"></div>
+    <div class="progress-dot" data-section="about"></div>
+    <div class="progress-dot" data-section="projects"></div>
+    <div class="progress-dot" data-section="leadership"></div>
+    <div class="progress-dot" data-section="skills"></div>
+    <div class="progress-dot" data-section="contact"></div>
   </div>
-  
+
   <!-- CV Preview Modal -->
   <div id="cvModal" class="modal">
     <div class="modal-content">
@@ -514,6 +530,10 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
     </div>
   </div>
   
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

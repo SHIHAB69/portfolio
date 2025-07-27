@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+  <body>
+  <!-- 3D Background Canvas -->
+  <canvas id="bgCanvas" class="bg-canvas"></canvas>
+  
+  <div class="main-bg">
+    <div class="container">
+      <header>
+        <div class="logo floating">Sihab Howladar</div>
+        <nav class="glass">
+          <ul>
+            <li><a href="#home" class="active animated-underline">Home</a></li>
+            <li><a href="#services" class="animated-underline">Services</a></li>
+            <li><a href="#about" class="animated-underline">About</a></li>
+            <li><a href="#portfolio" class="animated-underline">Featured Projects</a></li>
+            <li><a href="#contact" class="animated-underline">Contact</a></li>
+          </ul>
+          <button id="themeToggle" class="theme-btn shine-hover">Theme</button>
+        </nav>
+      </header>
+      <section id="home" class="hero fade-in">
+        <div class="hero-content fade-in">
+          <div class="hero-text">
+            <h4>Hello, I am</h4>
+            <h1>Sihab Howladar</h1>
+            <h2>Software Engineering Analyst</h2>
+            <div class="hero-summary">
+              <p>
+                Software Engineering Analyst at Techjays, building AI-powered recruitment solutions with Django.
+Experienced in Flutter, Django, and AI integration, with a track record of production-ready apps.
+Final-year Software Engineering student at DIU, passionate about AI and scalable systems.
+              </p>
+            </div>
+            <div class="hero-buttons">
+              <button class="btn primary shine-hover" id="downloadCV">Download CV</button>
+              <button class="btn secondary shine-hover" id="previewCV">Preview CV</button>
+              <button class="btn secondary shine-hover" id="hireMe">Hire Me</button>
+            </div>
+            <div class="social-icons">
+              <a href="https://github.com/SHIHAB69" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></a>
+              <a href="https://linkedin.com/in/sihabhowlader" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img src="profile.jpg" alt="Profile" class="floating" />
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio fade-in">
+        <h2>Featured Projects</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card tilt-card glass shine-hover stagger-item">
+            <a href="https://hirefinch.ai/" target="_blank">
+              <img src="assets/images/hirefinch1.png" alt="HireFinch AI Interview Platform" />
+              <div class="portfolio-info">
+                <h3>HireFinch</h3>
+                <p>AI-Powered Interview Platform</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card tilt-card glass shine-hover stagger-item">
+            <a href="https://play.google.com/store/apps/details?id=com.diucybersecuritycenter.insightpol" target="_blank">
+              <div class="image-scroll-container">
+                <img src="assets/images/insightpol1.png" alt="InsightPOL Police App" />
+                <img src="assets/images/insightpol2.png" alt="InsightPOL Police App" />
+                <img src="assets/images/insightpol3.png" alt="InsightPOL Police App" />
+              </div>
+              <div class="portfolio-info">
+                <h3>InsightPOL</h3>
+                <p>Police Forensic App</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-card tilt-card glass shine-hover stagger-item">
+            <a href="https://github.com/SHIHAB69/facebook_page_agent" target="_blank">
+              <img src="assets/images/MetaB.png" alt="Meta Business Agent" />
+              <div class="portfolio-info">
+                <h3>Meta Business Agent</h3>
+                <p>Message Automation Tool</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services fade-in">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Backend Development</h3>
+            <p>Scalable, secure server-side systems using Django and Flask with RESTful APIs and database integration.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 8L3 12L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 8L21 12L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 4L10 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Modern and responsive UI development using HTML, CSS, JavaScript, and frontend frameworks like React and Tailwind CSS.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Web Applications</h3>
+            <p>End-to-end web app development including design, functionality, and deployment tailored to business needs.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Android Application</h3>
+            <p>Native and cross-platform mobile apps for Android using Flutter, optimized for performance and usability.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM18 20H6V4H18V20Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 18C13.1 18 14 17.1 14 16C14 14.9 13.1 14 12 14C10.9 14 10 14.9 10 16C10 17.1 10.9 18 12 18Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>iOS Application</h3>
+            <p>High-quality iOS app development using Flutter, ensuring smooth performance on all Apple devices.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Flutter Application</h3>
+            <p>Beautiful, fast, and responsive cross-platform apps with a single codebase for Android, iOS, Web, and Desktop.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="currentColor">DJ</text>
+              </svg>
+            </div>
+            <h3>Django Web Application</h3>
+            <p>Full-stack web applications using the Django framework with clean architecture, admin panels, and API integration.</p>
+          </div>
+          <div class="service-card tilt-card glass shine-hover stagger-item">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>AI Applications</h3>
+            <p>Intelligent applications powered by AI/ML models, including chatbots, OCR, recommendation systems, and more using OpenAI, ML Kit, or custom-trained models.</p>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about fade-in">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-img">
+            <img src="profile.jpg" alt="About Me" />
+          </div>
+          <div class="about-text">
+            <p>
+              Software Engineering undergraduate with hands-on experience developing production-ready applications and integrating APIs using Java. Demonstrated ability to deliver high-quality code under tight deadlines, contributing to real-world deployments and performance enhancements. Focused on collaborative problem solving and committed to learning modern development frameworks to drive innovative IT solutions for federal clients.
+            </p>
+            <ul class="about-list">
+              <li><strong>Address:</strong> YKSG-2, DSC, Birulia, Savar, Dhaka, Bangladesh</li>
+              <li><strong>Nationality:</strong> Bangladeshi</li>
+              <li><strong>Field:</strong> Software Engineering</li>
+              <li><strong>University:</strong> Daffodil International University (DIU)</li>
+              <li><strong>Current Company:</strong> <a href="https://www.techjays.com/" target="_blank">Techjays</a></li>
+              <li><strong>Email:</strong> <a href="mailto:sihab2305341203@diu.edu.bd">sihab2305341203@diu.edu.bd</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+8801799531233">+8801799531233</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sihabhowlader" target="_blank">linkedin.com/in/sihabhowlader</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/SHIHAB69" target="_blank">github.com/SHIHAB69</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="stats-row">
+        <div class="stat">
+          <div class="stat-value">Software</div>
+          <div class="stat-label"><a href="https://www.techjays.com/" target="_blank">Engineer, Techjays</a></div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Acting</div>
+          <div class="stat-label"><a href="https://dslab.daffodilvarsity.edu.bd/club" target="_blank">President, Data Science Club</a></div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Bangladesh</div>
+          <div class="stat-label">Nationality</div>
+        </div>
+      </section>
+      <!-- Education Section -->
+      <section id="education" class="education fade-in">
+        <h2>Education</h2>
+        <div class="card">
+          <h3>B.Sc, Software Engineering</h3>
+          <p><strong>Institution:</strong> Daffodil International University (DIU), Bangladesh</p>
+          <p><strong>Duration:</strong> Sep 2023 - Sep 2027</p>
+        </div>
+      </section>
+      <!-- Work Experience Section -->
+      <section id="experience" class="experience fade-in">
+        <h2>Work Experience</h2>
+        <div class="card">
+          <h3>Software Engineer — <a href="https://www.techjays.com/" target="_blank">Techjays</a></h3>
+          <p><strong>Duration:</strong> Jul 2025 - Present</p>
+          <ul>
+            <li>Working on <a href="https://hirefinch.ai/" target="_blank">HireFinch</a> - an AI-powered interview platform, developing backend systems using Django and Python.</li>
+            <li>Implementing AI integration features including OpenAI and Gemini APIs for dynamic interview plan generation and coding question creation.</li>
+            <li>Building scalable backend architecture with REST APIs, webhook systems, and real-time question shuffling for fair interview processes.</li>
+            <li>Integrating 1:1 voice interview capabilities with AI scoring and contributing to security features and performance optimizations.</li>
+            <li>Collaborating with cross-functional teams to ensure smooth deployment, system performance, and adherence to quality standards.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Course Coordinator — <a href="https://q-bitlearning.com/" target="_blank">Q-Bit Learning</a></h3>
+          <p><strong>Duration:</strong> Jan 2025 – Mar 2025</p>
+          <ul>
+            <li>Coordinated course planning, module structure, and delivery schedules across multiple subjects including Data Structures, Algorithms, and Machine Learning.</li>
+            <li>Supervised curriculum quality, assigned instructors, and ensured timely delivery of online classes and assignments.</li>
+            <li>Managed communication between students, mentors, and the technical support team, ensuring effective resolution of issues.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Leadership & Volunteering Section -->
+      <section id="leadership" class="leadership fade-in">
+        <h2>Leadership & Volunteering</h2>
+        <div class="card">
+          <h3>Executive Member — <a href="https://www.linkedin.com/posts/basis-student-s-forum-daffodil-international-university-chapter_executiveteam-basisstudentsforum-innovationstartshere-activity-7266019147023548416-BnG0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEr3nsgBxLYjWS1LVF7MFQwP-JxpY5jSdg0" target="_blank">BASIS Students Forum, DIU Chapter</a></h3>
+          <ul>
+            <li>Actively involved in planning and executing tech-focused events, seminars, and workshops.</li>
+            <li>Supported industry collaborations and facilitated student engagement in tech entrepreneurship and skill development initiatives.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Research & Event Organizing Executive — <a href="https://www.linkedin.com/company/diu-data-science-club/" target="_blank">Data Science Club, DIU</a></h3>
+          <ul>
+            <li>Conducted internal research and technical documentation for club-driven AI and data science initiatives.</li>
+            <li>Assisted in organizing educational outreach programs and contributed to curriculum design for AI/ML workshops.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Lead Volunteer — <a href="https://datascience-summit-24.vercel.app/" target="_blank">4th National Data Science Summit 2024</a></h3>
+          <ul>
+            <li>Managed end-to-end logistics for the summit, including guest coordination, sponsor handling, food management, and venue preparation.</li>
+            <li>Successfully executed four parallel tech events: Promptcraft Challenge, Project Showcasing, Data Hackathon, and Poster Presentation.</li>
+            <li>Oversaw a large volunteer team and ensured smooth operations under the supervision of the Data Science Lab and Department of Software Engineering.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Organizer — Workshops and Competitions</h3>
+          <ul>
+            <li>Organized the Python Workshop under the Data Science Lab and Club.</li>
+            <li>Hosted the MLOps in Action Workshop, introducing tools like Docker and GitHub Actions.</li>
+            <li>Conducted Intro to Git and GitHub sessions twice (in 2024 and 2025).</li>
+            <li>Organized the Agentic AI Project Showcase under the Department of Software Engineering.</li>
+            <li>Coordinated the Agentic AI Competition for Web Development and E-commerce Solutions.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="projects fade-in">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3><a href="https://hirefinch.ai/" target="_blank">HireFinch – AI-Powered Interview Platform</a></h3>
+            <p><strong>Role:</strong> Backend Developer (Django)</p>
+            <p><strong>Tech Stack:</strong> Django, Python, REST API, OpenAI API, Gemini API, reCaptcha</p>
+            <p><strong>Description:</strong></p>
+            <p>Working on backend development and AI integration for an AI-powered structured interview platform. Key contributions include:</p>
+            <ul>
+              <li>AI-generated coding questions based on job roles</li>
+              <li>Dynamic interview plan generation using LLMs</li>
+              <li>Real-time question shuffling for fairness</li>
+              <li>1:1 voice interview integration with AI scoring</li>
+              <li>Webhook-based updates and scoring pipeline</li>
+              <li>Contributed to scalable backend design and AI-driven automation to reduce recruiter workload by up to 80%</li>
+              <li>Integrated security features and improvements</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://play.google.com/store/apps/details?id=com.diucybersecuritycenter.insightpol" target="_blank">Bangladesh Police Forensic App – InsightPOL</a></h3>
+            
+            <p><strong>Role:</strong> Full-Stack Flutter Developer</p>
+            <p><strong>Tech Stack:</strong> Flutter, REST API, Hive, Webhooks, SharedPreferences</p>
+            <p><strong>Description:</strong></p>
+            <p>Developed a full-featured mobile application for the Bangladesh Police to streamline forensic request handling and communication between officers and forensic teams. The app was officially used in a training program by the Bangladesh Police and is actively used by police and forensic teams of Bangladesh Police for daily operations.</p>
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+              <li>Built secure media submission and forensic request features</li>
+              <li>Integrated real-time messaging using webhooks and optimized socket events</li>
+              <li>Managed authentication and user sessions using Hive and SharedPreferences</li>
+              <li>Designed clean, responsive UI with dashboard, chat, and analytics modules</li>
+              <li>Collaborated with backend team for API integration and deployment readiness</li>
+            </ul>
+            <p><strong>Impact:</strong></p>
+            <p>Improved communication efficiency and digital workflow adoption for forensic operations in law enforcement. The app was successfully used in an official training session for officers and continues to be actively deployed for daily forensic operations by Bangladesh Police teams.</p>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/SHIHAB69/facebook_page_agent" target="_blank">Meta Business Agent (Message Automation Tool)</a></h3>
+            <ul>
+              <li>Developed a scalable, agentic AI system for academic support, admission help, OCR-based form handling, and routine automation.</li>
+              <li>Designed a no-human-touch pipeline for customer engagement across Facebook, Instagram, and WhatsApp APIs.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3>HR Automation System</h3>
+            <ul>
+              <li>Built a free-to-use AI chatbot using GROQ's open LLMs, maintaining a ChatGPT-like experience for hiring automation.</li>
+              <li>Implemented rule-based and ML-based screening for unbiased, data-driven hiring decisions.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/SHIHAB69/murphys_AI" target="_blank">Murphys_AI</a></h3>
+            <ul>
+              <li>Built a free-to-use AI chatbot using GROQ's open LLMs, maintaining a ChatGPT-like experience in Flutter.</li>
+              <li>Integrated alternative LLMs while preserving response quality and app responsiveness.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/SHIHAB69/Vpn_flutter_project" target="_blank">Mart VPN</a></h3>
+            <ul>
+              <li>Developed a simple, effective VPN app in Flutter for fast and secure internet access.</li>
+              <li>Managed network configurations and performance optimization for cross-platform deployment.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3><a href="https://github.com/SHIHAB69/text_recognition_app-main" target="_blank">Text Recognition App</a></h3>
+            <ul>
+              <li>Built using Flutter and Google ML Kit to extract and process text from images.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Technical Skills Section -->
+      <section id="skills" class="skills fade-in">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>Java, C, Python, JavaScript, Dart</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Frameworks & Libraries</h3>
+            <ul>
+              <li>Flutter, Django, Flask, Bloc, MVVM, MVT</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Cloud & Databases</h3>
+            <ul>
+              <li>Firebase, MongoDB, SQL</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Tools & Platforms</h3>
+            <ul>
+              <li>Docker, Jupyter, API, RAG</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Leadership, Public Speaking, Content Writing, Generative AI</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Certifications & Achievements Section -->
+      <section id="certifications" class="certifications fade-in">
+        <h2>Certifications & Achievements</h2>
+        <div class="card">
+          <ul>
+            <li><a href="https://scrimba.com/@SHIHAB69:certs" target="_blank">Generative AI Engineer Path | Scrimba</a>: Completed a structured learning path covering prompt engineering, LLM integration, and generative workflows using Python and modern AI tools.</li>
+            <li>Participant — <a href="https://nsac.basis.org.bd/" target="_blank">NASA International Space Apps Challenge</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- Career Aspirations Section -->
+      <section id="aspirations" class="aspirations fade-in">
+        <h2>Career Aspirations</h2>
+        <div class="card">
+          <p>
+            In the next 2–5 years, I aim to become a well-rounded problem solver capable of designing intelligent, scalable systems. I’m passionate about building real-world AI-powered applications, continuing my journey in mobile development, and contributing to agent-based software systems. I also plan to publish research and contribute to open-source AI tools that benefit the broader tech community.
+          </p>
+        </div>
+
+      <section id="contact" class="contact fade-in">
+        <h2>Contact me</h2>
+        <form id="contactForm">
+          <div class="form-row">
+            <input type="text" id="name" name="name" placeholder="Name" required />
+            <input type="email" id="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="form-row">
+            <input type="text" id="phone" name="phone" placeholder="Phone" />
+            <input type="text" id="subject" name="subject" placeholder="Subject" />
+          </div>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn primary">Send</button>
+        </form>
+        <div id="formMessage"></div>
+      </section>
+      <footer>
+        <div class="footer-logo">Sihab Howladar</div>
+        <div class="footer-social">
+          <a href="https://github.com/SHIHAB69" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></a>
+          <a href="https://linkedin.com/in/sihabhowlader" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
+        </div>
+        <p>&copy; 2025 Sihab Howladar. All rights reserved.</p>
+      </footer>
+    </div>
+    </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress">
+    <div class="progress-dot" data-section="home"></div>
+    <div class="progress-dot" data-section="portfolio"></div>
+    <div class="progress-dot" data-section="services"></div>
+    <div class="progress-dot" data-section="about"></div>
+    <div class="progress-dot" data-section="projects"></div>
+    <div class="progress-dot" data-section="leadership"></div>
+    <div class="progress-dot" data-section="skills"></div>
+    <div class="progress-dot" data-section="contact"></div>
+  </div>
+
+  <!-- CV Preview Modal -->
+  <div id="cvModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Sihab Howladar - CV</h2>
+        <span class="close" id="closeModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <iframe id="cvIframe" src="Sihab_CV_2025 v2.pdf" width="100%" height="600px"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button class="btn primary" id="downloadFromModal">Download CV</button>
+        <button class="btn secondary" id="closeModalBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Hire Me - Project Inquiry</h2>
+        <span class="close" id="closeContactModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="hireMeForm">
+          <div class="form-row">
+            <input type="text" id="hireName" name="name" placeholder="Your Name *" required />
+            <input type="email" id="hireEmail" name="email" placeholder="Your Email *" required />
+          </div>
+          <div class="form-row">
+            <input type="text" id="hireCompany" name="company" placeholder="Company/Organization" />
+            <input type="tel" id="hirePhone" name="phone" placeholder="Phone Number" />
+          </div>
+          <input type="text" id="hireSubject" name="subject" placeholder="Project Type (e.g., Web App, Mobile App, AI Integration) *" required />
+          <textarea id="hireMessage" name="message" placeholder="Project Details & Requirements *" required></textarea>
+          <div class="form-row">
+            <select id="hireBudget" name="budget" required>
+              <option value="">Select Budget Range *</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+              <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+              <option value="$25,000+">$25,000+</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+            <select id="hireTimeline" name="timeline" required>
+              <option value="">Select Timeline *</option>
+              <option value="1-2 weeks">1-2 weeks</option>
+              <option value="1 month">1 month</option>
+              <option value="2-3 months">2-3 months</option>
+              <option value="3-6 months">3-6 months</option>
+              <option value="6+ months">6+ months</option>
+              <option value="To be discussed">To be discussed</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn primary" id="submitHireMe">Send Inquiry</button>
+        <button class="btn secondary" id="closeContactModalBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <div class="toast-icon">✅</div>
+      <div class="toast-message">
+        <h4>Inquiry Sent!</h4>
+        <p>Your email client should open with a pre-filled message. If it doesn't, please email me directly at sihab2305341203@diu.edu.bd</p>
+      </div>
+      <button class="toast-close" id="toastClose">&times;</button>
+    </div>
+  </div>
+  
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
