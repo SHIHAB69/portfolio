@@ -1,0 +1,656 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181818;
+  color: #fff;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* === Main Background and Container === */
+.main-bg {
+  background: #181818;
+  min-height: 100vh;
+  border-left: 10px solid #ff6a00;
+  border-right: 10px solid #ff6a00;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #232323;
+  box-shadow: 0 0 32px 0 rgba(0,0,0,0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+/* === Header & Navigation === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  background: #232323;
+}
+
+.logo, .footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6a00;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+.theme-btn {
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+
+.theme-btn:hover {
+  background: #e65100;
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem 2rem 2rem;
+  background: #232323;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h4 {
+  color: #ff6a00;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  color: #ff6a00;
+  margin-bottom: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.primary {
+  background: #ff6a00;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #e65100;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #ff6a00;
+  border: 2px solid #ff6a00;
+}
+
+.btn.secondary:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1) brightness(1.5);
+  transition: filter 0.2s;
+}
+
+/* Make GitHub icon visible on dark background */
+.social-icons a[href*="github"] img,
+.footer-social a[href*="github"] img {
+  filter: invert(1) brightness(2) !important;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.social-icons a:hover img {
+  filter: none;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #ff6a00;
+  object-fit: cover;
+  background: #181818;
+}
+
+/* === Services Section === */
+.services {
+  padding: 2rem;
+}
+
+.services h2 {
+  text-align: center;
+  color: #ff6a00;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  border: 1.5px solid #ff6a00;
+  box-shadow: 0 4px 16px rgba(255,106,0,0.08);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  color: #ff6a00;
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.service-card p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* === About Section === */
+.about {
+  padding: 2rem;
+}
+
+.about h2 {
+  text-align: center;
+  color: #ff6a00;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #ff6a00;
+  object-fit: cover;
+  background: #181818;
+}
+
+.about-text {
+  flex: 1;
+  color: #eee;
+  font-size: 1.1rem;
+}
+
+.about-list {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-list li {
+  margin-bottom: 0.3rem;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.about-list a {
+  color: #ff6a00;
+  text-decoration: underline;
+}
+
+.about-text .btn {
+  margin-top: 1rem;
+}
+
+/* === Stats Row === */
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #181818;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  border: 1.5px solid #232323;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat {
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  color: #ff6a00;
+  font-weight: bold;
+}
+
+.stat-label {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* === Portfolio Section === */
+.portfolio {
+  padding: 2rem;
+}
+
+.portfolio h2 {
+  text-align: center;
+  color: #ff6a00;
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  background: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-card:hover {
+  border: 1.5px solid #ff6a00;
+  box-shadow: 0 4px 16px rgba(255,106,0,0.08);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.portfolio-info h3 {
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.portfolio-info p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* === Card, Grid, and Section Styles for New Sections === */
+.card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  color: #fff;
+}
+
+.card h3 {
+  color: #ff6a00;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  margin-left: 1.2rem;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  color: #fff;
+}
+
+.project-card h3 {
+  color: #ff6a00;
+  margin-bottom: 0.5rem;
+}
+
+.project-card ul {
+  margin-left: 1.2rem;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  color: #fff;
+}
+
+.skill-card h3 {
+  color: #ff6a00;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card ul {
+  margin-left: 1.2rem;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* === Contact Section === */
+.contact {
+  padding: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #ff6a00;
+  margin-bottom: 2rem;
+}
+
+#contactForm {
+  background: #181818;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1.5px solid #232323;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1.5px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #232323;
+  color: #fff;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border: 1.5px solid #ff6a00;
+  outline: none;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #ff6a00;
+  text-align: center;
+}
+
+/* === Footer === */
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 1.5px solid #181818;
+  margin-top: 2rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6a00;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1) brightness(1.5);
+  transition: filter 0.2s;
+}
+
+/* Make GitHub icon visible on dark background */
+.footer-social a[href*="github"] img {
+  filter: invert(1) brightness(2) !important;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.footer-social a:hover img {
+  filter: none;
+}
+
+footer p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1100px) {
+  .container {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-bg {
+    border-left: 0;
+    border-right: 0;
+  }
+  .container {
+    border-radius: 0;
+  }
+  .services-grid,
+  .portfolio-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-content,
+  .about-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .services-grid,
+  .portfolio-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .container {
+    padding: 0;
+  }
+  header, .hero, .services, .about, .portfolio, .contact, .education, .experience, .leadership, .projects, .skills, .certifications, .aspirations {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  #contactForm {
+    padding: 1rem 0.5rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* === Dark Theme Toggle (optional, for script.js) === */
+body.dark {
+  background: #111;
+  color: #fff;
+}
+
+body.dark .container,
+body.dark header,
+body.dark .hero,
+body.dark .services,
+body.dark .about,
+body.dark .portfolio,
+body.dark .contact,
+body.dark footer {
+  background: #181818;
+  color: #fff;
+}
+
+body.dark .service-card,
+body.dark .portfolio-card,
+body.dark #contactForm {
+  background: #232323;
+  border-color: #444;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #181818;
+  color: #fff;
+  border: 1.5px solid #444;
+}
