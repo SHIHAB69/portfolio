@@ -18,10 +18,11 @@
         <nav class="glass">
           <ul>
             <li><a href="#home" class="active animated-underline">Home</a></li>
+            <li><a href="#portfolio" class="animated-underline">Featured Projects</a></li>
+            <li><a href="#github-stats" class="animated-underline">GitHub Activity</a></li>
             <li><a href="#services" class="animated-underline">Services</a></li>
             <li><a href="#about" class="animated-underline">About</a></li>
-            <li><a href="#portfolio" class="animated-underline">Featured Projects</a></li>
-            <li><a href="#contact" class="animated-underline">Contact</a></li>
+            <li><a href="#repositories" class="animated-underline">Repositories</a></li>
           </ul>
           <button id="themeToggle" class="theme-btn shine-hover">Theme</button>
         </nav>
@@ -86,6 +87,40 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
                 <h3>Meta Business Agent</h3>
                 <p>Message Automation Tool</p>
               </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- GitHub Stats Section -->
+      <section id="github-stats" class="github-stats fade-in">
+        <h2>GitHub Activity</h2>
+        <div class="github-container">
+          <div class="github-graph">
+            <img 
+              src="https://ghchart.rshah.org/2E3440/SHIHAB69" 
+              alt="Sihab Howladar's GitHub Contributions"
+              class="contribution-graph"
+            />
+          </div>
+          <div class="github-info">
+            <h3>My Coding Journey</h3>
+            <p>Track my daily contributions and coding activity on GitHub. Each square represents a day, with darker colors indicating more commits.</p>
+            <div class="github-stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">Loading...</span>
+                <span class="stat-label">Total Contributions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Loading...</span>
+                <span class="stat-label">Longest Streak</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Loading...</span>
+                <span class="stat-label">Public Repositories</span>
+              </div>
+            </div>
+            <a href="https://github.com/SHIHAB69" target="_blank" class="btn primary shine-hover">
+              View My GitHub Profile
             </a>
           </div>
         </div>
@@ -414,22 +449,33 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
             In the next 2–5 years, I aim to become a well-rounded problem solver capable of designing intelligent, scalable systems. I’m passionate about building real-world AI-powered applications, continuing my journey in mobile development, and contributing to agent-based software systems. I also plan to publish research and contribute to open-source AI tools that benefit the broader tech community.
           </p>
         </div>
+      </section>
 
-      <section id="contact" class="contact fade-in">
-        <h2>Contact me</h2>
-        <form id="contactForm">
-          <div class="form-row">
-            <input type="text" id="name" name="name" placeholder="Name" required />
-            <input type="email" id="email" name="email" placeholder="Email" required />
+      <!-- GitHub Repositories Showcase -->
+      <section id="repositories" class="repositories fade-in">
+        <h2>Featured Repositories</h2>
+        <div class="repos-container">
+          <div class="repos-grid" id="reposGrid">
+            <!-- Repositories will be loaded dynamically -->
+            <div class="repo-card glass shine-hover">
+              <div class="repo-header">
+                <h3>Loading...</h3>
+                <span class="repo-stars">⭐ 0</span>
+              </div>
+              <p class="repo-description">Loading repository data...</p>
+              <div class="repo-stats">
+                <span class="repo-language">Loading...</span>
+                <span class="repo-forks">🔀 0</span>
+                <span class="repo-updated">Updated recently</span>
+              </div>
+            </div>
           </div>
-          <div class="form-row">
-            <input type="text" id="phone" name="phone" placeholder="Phone" />
-            <input type="text" id="subject" name="subject" placeholder="Subject" />
+          <div class="repos-footer">
+            <a href="https://github.com/SHIHAB69?tab=repositories" target="_blank" class="btn primary shine-hover">
+              View All Repositories
+            </a>
           </div>
-          <textarea id="message" name="message" placeholder="Message" required></textarea>
-          <button type="submit" class="btn primary">Send</button>
-        </form>
-        <div id="formMessage"></div>
+        </div>
       </section>
       <footer>
         <div class="footer-logo">Sihab Howladar</div>
@@ -446,12 +492,13 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
   <div class="scroll-progress">
     <div class="progress-dot" data-section="home"></div>
     <div class="progress-dot" data-section="portfolio"></div>
+    <div class="progress-dot" data-section="github-stats"></div>
     <div class="progress-dot" data-section="services"></div>
     <div class="progress-dot" data-section="about"></div>
     <div class="progress-dot" data-section="projects"></div>
     <div class="progress-dot" data-section="leadership"></div>
     <div class="progress-dot" data-section="skills"></div>
-    <div class="progress-dot" data-section="contact"></div>
+    <div class="progress-dot" data-section="repositories"></div>
   </div>
 
   <!-- CV Preview Modal -->
@@ -471,53 +518,7 @@ Final-year Software Engineering student at DIU, passionate about AI and scalable
     </div>
   </div>
 
-  <!-- Contact Form Modal -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Hire Me - Project Inquiry</h2>
-        <span class="close" id="closeContactModal">&times;</span>
-      </div>
-      <div class="modal-body">
-        <form id="hireMeForm">
-          <div class="form-row">
-            <input type="text" id="hireName" name="name" placeholder="Your Name *" required />
-            <input type="email" id="hireEmail" name="email" placeholder="Your Email *" required />
-          </div>
-          <div class="form-row">
-            <input type="text" id="hireCompany" name="company" placeholder="Company/Organization" />
-            <input type="tel" id="hirePhone" name="phone" placeholder="Phone Number" />
-          </div>
-          <input type="text" id="hireSubject" name="subject" placeholder="Project Type (e.g., Web App, Mobile App, AI Integration) *" required />
-          <textarea id="hireMessage" name="message" placeholder="Project Details & Requirements *" required></textarea>
-          <div class="form-row">
-            <select id="hireBudget" name="budget" required>
-              <option value="">Select Budget Range *</option>
-              <option value="Under $1,000">Under $1,000</option>
-              <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-              <option value="$10,000 - $25,000">$10,000 - $25,000</option>
-              <option value="$25,000+">$25,000+</option>
-              <option value="To be discussed">To be discussed</option>
-            </select>
-            <select id="hireTimeline" name="timeline" required>
-              <option value="">Select Timeline *</option>
-              <option value="1-2 weeks">1-2 weeks</option>
-              <option value="1 month">1 month</option>
-              <option value="2-3 months">2-3 months</option>
-              <option value="3-6 months">3-6 months</option>
-              <option value="6+ months">6+ months</option>
-              <option value="To be discussed">To be discussed</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn primary" id="submitHireMe">Send Inquiry</button>
-        <button class="btn secondary" id="closeContactModalBtn">Cancel</button>
-      </div>
-    </div>
-  </div>
+
   
   <!-- Toast Notification -->
   <div id="toast" class="toast">
